@@ -3,4 +3,170 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
 }
+
+h1{
+    font-size: 1.75rem;
+}
+
+h2{
+    font-size: 1.5rem;
+}
+
+h3{
+    font-size: 1.25rem;
+}
+
+h4{
+    font-size: 1rem;
+}
+
+p{
+    font-size: 0.75rem;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+/*
+Nav styling
+*/
+#nav{
+    display: flex;
+    padding: 0.5rem 1rem;
+    background-color: gray;
+}
+
+/*
+Grid layout for playlist cards
+*/
+.playlist-cards{
+    display: grid;
+    grid-template-rows: 300px;
+    grid-auto-rows: 300px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    padding: 1.5rem;
+}
+
+/*
+    Single playlist card
+*/
+.playlist-card{
+    border: 2px solid black;
+    display: flex;
+    border-radius: 1rem;
+    padding: 0.25rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*
+    Title & Creator Name box
+*/
+.info{
+    width: 100%;
+    text-indent: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    line-height: 0;
+    align-items:start;
+    justify-content: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/*
+    Image styling
+*/
+.playlist-card > img{
+    width: 100%;
+    border-radius: 1rem;
+    max-height: 175px;
+    object-fit: cover;
+}
+
+/*
+    Like button reset styling
+*/
+.playlist-card button{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+/*
+    Like and Like count Box
+*/
+.like-container{
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+    width: 100%;
+    justify-content: flex-start;
+    padding-left: 1rem;
+}
+
+/*
+Modal
+*/
+.modal {
+   display: none; /* Hidden by default */
+   position: fixed; /* Stay in place */
+   z-index: 1; /* Sit on top */
+   left: 0;
+   top: 0;
+   width: 100%; /* Full width */
+   height: 100%; /* Full height */
+   overflow: auto; /* Enable scroll if needed */
+   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+   background-color: #fefefe;
+   margin: 15% auto; /* 15% from the top and centered */
+   padding: 20px;
+   border: 1px solid #888;
+   border-radius: 1rem;
+   width: 80%; /* Could be more or less, depending on screen size */
+   min-height: 200px;
+   display: flex;
+   flex-direction: column;
+   padding: 0, 10rem;
+}
+.close {
+   color: #aaa;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+}
+.close:hover,
+.close:focus {
+   color: black;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+
+/*
+    Footer styling
+*/
+#footer{
+    min-height: 50px;
+    background-color: grey;
+}
+
+

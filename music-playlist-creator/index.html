@@ -8,19 +8,81 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     
     <link rel="stylesheet" href="style.css">
+
+    <!--Font awesome kit importation script-->
+    <script src="https://kit.fontawesome.com/7c56c94f87.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <!-- Your header content here -->
+    <header id="nav">
+        <h1>
+            Music Playlist Explorer
+        </h1>
     </header>
 
     <main> 
-        <!-- Your main content here -->
+        <section class="playlist-cards">
+            <div class="playlist-card">
+                <img src="./assets/img/download.jpeg" alt="Kanye west">
+                <div class="info">
+                    <h3>Playlist Title</h3>
+                    <p>Creator Name</p>
+                </div>
+                <div class="like-container">
+                    <button> <i class="fa-regular fa-heart"></i></button>
+                    <p>99</p>
+                </div>
+            </div>
+            <div class="playlist-card">
+                <img src="./assets/img/download.jpeg" alt="Kanye west">
+                <div class="info">
+                    <h3>Playlist Title</h3>
+                    <p>Creator Name</p>
+                </div>
+                <div class="like-container">
+                    <button> <i class="fa-regular fa-heart"></i></button>
+                    <p>99</p>
+                </div>
+            </div>
+            <div class="playlist-card">
+                <img src="./assets/img/download.jpeg" alt="Kanye west">
+                <div class="info">
+                    <h3>Playlist Title</h3>
+                    <p>Creator Name</p>
+                </div>
+                <div class="like-container">
+                    <button> <i class="fa-regular fa-heart"></i></button>
+                    <p>99</p>
+                </div>
+            </div>
+            <div class="playlist-card">
+                <img src="./assets/img/download.jpeg" alt="Kanye west">
+                <div class="info">
+                    <h3>Playlist Title</h3>
+                    <p>Creator Name</p>
+                </div>
+                <div class="like-container">
+                    <button> <i class="fa-regular fa-heart"></i></button>
+                    <p>99</p>
+                </div>
+            </div>
+        </section>
+        <div onclick="openModal({name: 'Summer Beats Festival', imageUrl: 'path/to/festival.jpg', dates: 'July 15-17', location: 'Downtown Park', lineup: ['Artist A', 'Artist B']})">
+            Click here for festival details!
+        </div>
     </main>
 
-    <footer>
-        <!-- Your footer content here -->
+    <div id="event-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <section></section>
+        </div>
+    </div>
+
+
+    <footer id="footer">
+        footer
     </footer>
+
     <script src="data/data.js"></script>
     <script src="script.js"></script>
 </body>
