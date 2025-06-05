@@ -3,7 +3,7 @@
         "songID": "1",
         "song_name": "Dark Fantasy",
         "song_author": "Kanye West",
-        "song_art": "./assets/img/kanye-gym.jpeg",
+        "song_art": "./assets/img/songs/mbdtf.jpeg",
         "song_album": "My Beautiful Dark Twisted Fantasy",
         "song_duration": "4:40"
     },
@@ -11,7 +11,7 @@
         "songID": "2",
         "song_name": "Power",
         "song_author": "Kanye West",
-        "song_art": "./assets/img/kanye-gym.jpeg",
+        "song_art": "./assets/img/songs/mbdtf.jpeg",
         "song_album": "My Beautiful Dark Twisted Fantasy",
         "song_duration": "4:52"
     },
@@ -19,7 +19,7 @@
         "songID": "3",
         "song_name": "Stronger",
         "song_author": "Kanye West",
-        "song_art": "./assets/img/kanye-gym.jpeg",
+        "song_art": "./assets/img/songs/graduation.jpeg",
         "song_album": "Graduation",
         "song_duration": "5:11"
     },
@@ -27,7 +27,7 @@
         "songID": "4",
         "song_name": "Can't Tell Me Nothing",
         "song_author": "Kanye West",
-        "song_art": "./assets/img/kanye-gym.jpeg",
+        "song_art": "./assets/img/songs/graduation.jpeg",
         "song_album": "Graduation",
         "song_duration": "4:32"
     },
@@ -35,7 +35,7 @@
         "songID": "5",
         "song_name": "Good Morning",
         "song_author": "Kanye West",
-        "song_art": "./assets/img/kanye-gym.jpeg",
+        "song_art": "./assets/img/songs/graduation.jpeg",
         "song_album": "Graduation",
         "song_duration": "3:15"
     },
@@ -43,7 +43,7 @@
         "songID": "6",
         "song_name": "See You Again",
         "song_author": "Tyler, The Creator",
-        "song_art": "./assets/img/tyler-vibes.jpeg",
+        "song_art": "./assets/img/songs/flower-boy.jpeg",
         "song_album": "Flower Boy",
         "song_duration": "3:00"
     },
@@ -51,7 +51,7 @@
         "songID": "7",
         "song_name": "EARFQUAKE",
         "song_author": "Tyler, The Creator",
-        "song_art": "./assets/img/tyler-vibes.jpeg",
+        "song_art": "./assets/img/songs/igor.jpeg",
         "song_album": "IGOR",
         "song_duration": "3:10"
     },
@@ -59,7 +59,7 @@
         "songID": "8",
         "song_name": "NEW MAGIC WAND",
         "song_author": "Tyler, The Creator",
-        "song_art": "./assets/img/tyler-vibes.jpeg",
+        "song_art": "./assets/img/songs/igor.jpeg",
         "song_album": "IGOR",
         "song_duration": "3:15"
     },
@@ -67,7 +67,7 @@
         "songID": "9",
         "song_name": "IFHY",
         "song_author": "Tyler, The Creator",
-        "song_art": "./assets/img/tyler-vibes.jpeg",
+        "song_art": "./assets/img/songs/wolf.jpeg",
         "song_album": "Wolf",
         "song_duration": "4:47"
     },
@@ -75,7 +75,7 @@
         "songID": "10",
         "song_name": "WUSYANAME",
         "song_author": "Tyler, The Creator",
-        "song_art": "./assets/img/tyler-vibes.jpeg",
+        "song_art": "./assets/img/songs/cmiygl.jpeg",
         "song_album": "Call Me If You Get Lost",
         "song_duration": "2:12"
     },
@@ -83,7 +83,7 @@
         "songID": "11",
         "song_name": "Alright",
         "song_author": "Kendrick Lamar",
-        "song_art": "./assets/img/kendrick-deep.jpeg",
+        "song_art": "./assets/img/songs/tpab.jpeg",
         "song_album": "To Pimp a Butterfly",
         "song_duration": "3:39"
     },
@@ -91,7 +91,7 @@
         "songID": "12",
         "song_name": "Money Trees",
         "song_author": "Kendrick Lamar",
-        "song_art": "./assets/img/kendrick-deep.jpeg",
+        "song_art": "./assets/img/songs/gkmc.jpeg",
         "song_album": "good kid, m.A.A.d city",
         "song_duration": "6:27"
     },
@@ -99,7 +99,7 @@
         "songID": "13",
         "song_name": "DNA.",
         "song_author": "Kendrick Lamar",
-        "song_art": "./assets/img/kendrick-deep.jpeg",
+        "song_art": "./assets/img/songs/damn.jpeg",
         "song_album": "DAMN.",
         "song_duration": "3:06"
     },
@@ -107,7 +107,7 @@
         "songID": "14",
         "song_name": "HUMBLE.",
         "song_author": "Kendrick Lamar",
-        "song_art": "./assets/img/kendrick-deep.jpeg",
+        "song_art": "./assets/img/songs/damn.jpeg",
         "song_album": "DAMN.",
         "song_duration": "2:57"
     },
@@ -115,7 +115,7 @@
         "songID": "15",
         "song_name": "Sing About Me, I'm Dying of Thirst",
         "song_author": "Kendrick Lamar",
-        "song_art": "./assets/img/kendrick-deep.jpeg",
+        "song_art": "./assets/img/songs/gkmc.jpeg",
         "song_album": "good kid, m.A.A.d city",
         "song_duration": "12:03"
     },
@@ -123,7 +123,7 @@
         "songID": "16",
         "song_name": "Tití Me Preguntó",
         "song_author": "Bad Bunny",
-        "song_art": "./assets/img/badbunny-perreo.jpeg",
+        "song_art": "./assets/img/songs/uvst.jpeg",
         "song_album": "Un Verano Sin Ti",
         "song_duration": "4:03"
     },
@@ -131,7 +131,7 @@
         "songID": "17",
         "song_name": "Safaera",
         "song_author": "Bad Bunny",
-        "song_art": "./assets/img/badbunny-perreo.jpeg",
+        "song_art": "./assets/img/songs/yhlqmdlg.jpeg",
         "song_album": "YHLQMDLG",
         "song_duration": "4:55"
     },
@@ -139,7 +139,7 @@
         "songID": "18",
         "song_name": "Yo Perreo Sola",
         "song_author": "Bad Bunny",
-        "song_art": "./assets/img/badbunny-perreo.jpeg",
+        "song_art": "./assets/img/songs/yhlqmdlg.jpeg",
         "song_album": "YHLQMDLG",
         "song_duration": "3:18"
     },
@@ -147,7 +147,7 @@
         "songID": "19",
         "song_name": "La Santa",
         "song_author": "Bad Bunny",
-        "song_art": "./assets/img/badbunny-perreo.jpeg",
+        "song_art": "./assets/img/songs/yhlqmdlg.jpeg",
         "song_album": "YHLQMDLG",
         "song_duration": "3:27"
     },
@@ -155,7 +155,7 @@
         "songID": "20",
         "song_name": "Callaíta",
         "song_author": "Bad Bunny",
-        "song_art": "./assets/img/badbunny-perreo.jpeg",
+        "song_art": "./assets/img/songs/uvst.jpeg",
         "song_album": "Un Verano Sin Ti",
         "song_duration": "4:10"
     }
