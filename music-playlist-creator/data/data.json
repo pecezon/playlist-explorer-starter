@@ -1,0 +1,82 @@
+[
+    {
+        "playlistID": "1",
+        "playlist_name": "Kanye West Gym Playlist",
+        "playlist_author": "Diegopez",
+        "playlist_art": "./assets/img/playlists/kanye-gym.jpeg",
+        "songs": [1, 2, 3, 4, 5],
+        "likes": 254
+    },
+    {
+        "playlistID": "2",
+        "playlist_name": "Tyler the Creator Vibes",
+        "playlist_author": "LupitaTR",
+        "playlist_art": "./assets/img/playlists/tyler-vibes.jpeg",
+        "songs": [6, 7, 8, 9, 10],
+        "likes": 312
+    },
+    {
+        "playlistID": "3",
+        "playlist_name": "Kendrick Deep Cuts",
+        "playlist_author": "MCJuarez",
+        "playlist_art": "./assets/img/playlists/kendrick-deep.jpeg",
+        "songs": [11, 12, 13, 14, 15],
+        "likes": 198
+    },
+    {
+        "playlistID": "4",
+        "playlist_name": "Bad Bunny Perreo Intenso",
+        "playlist_author": "LaFlaca69",
+        "playlist_art": "./assets/img/playlists/badbunny-perreo.jpeg",
+        "songs": [16, 17, 18, 19, 20],
+        "likes": 429
+    },
+    {
+        "playlistID": "5",
+        "playlist_name": "Perreo Pa' la Playa 🌊",
+        "playlist_author": "SandyPerrea",
+        "playlist_art": "./assets/img/playlists/perreo-playa.jpeg",
+        "songs": [16, 17, 18, 20],
+        "likes": 376
+    },
+    {
+        "playlistID": "6",
+        "playlist_name": "Kendrick Lamar: Bars & Soul",
+        "playlist_author": "ElLíricon",
+        "playlist_art": "./assets/img/playlists/kendrick-bars.jpeg",
+        "songs": [11, 13, 14, 15],
+        "likes": 205
+    },
+    {
+        "playlistID": "7",
+        "playlist_name": "IGOR Mood Only",
+        "playlist_author": "CherryBombLover",
+        "playlist_art": "./assets/img/playlists/igor-tyler.jpeg",
+        "songs": [6, 7, 8, 10],
+        "likes": 287
+    },
+    {
+        "playlistID": "8",
+        "playlist_name": "Yeezy Classic Hits",
+        "playlist_author": "WestSide",
+        "playlist_art": "./assets/img/playlists/kanye-classics.jpeg",
+        "songs": [1, 2, 3, 4, 5],
+        "likes": 310
+    },
+    {
+        "playlistID": "9",
+        "playlist_name": "Bad Bunny Sad Boy Hours 💔",
+        "playlist_author": "CoraRoto",
+        "playlist_art": "./assets/img/playlists/badbunny-sad.jpeg",
+        "songs": [18, 19, 20],
+        "likes": 269
+    },
+    {
+        "playlistID": "10",
+        "playlist_name": "Rap Gods United",
+        "playlist_author": "Diegopez",
+        "playlist_art": "./assets/img/playlists/rap-gods.jpeg",
+        "songs": [2, 9, 13, 14, 17],
+        "likes": 341
+    }
+]

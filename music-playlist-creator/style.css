@@ -7,10 +7,14 @@ body {
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
+    font-family: "Inter", sans-serif;
+    color: #f8f8f8;
+    background-color: black;
 }
 
 h1{
     font-size: 1.75rem;
+    font-style: normal;
 }
 
 h2{
@@ -31,8 +35,8 @@ p{
 
 a{
     text-decoration: none;
-    color: black;
     cursor: pointer;
+    color: white;
 }
 
 /*
@@ -41,13 +45,15 @@ Nav styling
 #nav{
     display: flex;
     padding: 0.5rem 1rem;
-    background-color: gray;
+    background-color: #121212;
+    align-items: center;
+    justify-content: center;
 }
 
 /*
 Grid layout for playlist cards
 */
-.playlist-cards{
+#playlist-cards{
     display: grid;
     grid-template-rows: 300px;
     grid-auto-rows: 300px;
@@ -60,7 +66,8 @@ Grid layout for playlist cards
     Single playlist card
 */
 .playlist-card{
-    border: 2px solid black;
+    border: 2px solid #2a2a2a;
+    cursor: pointer;
     display: flex;
     border-radius: 1rem;
     padding: 0.25rem;
@@ -91,7 +98,7 @@ Grid layout for playlist cards
 .playlist-card > img{
     width: 100%;
     border-radius: 1rem;
-    max-height: 175px;
+    height: 175px;
     object-fit: cover;
 }
 
@@ -136,26 +143,73 @@ Modal
 }
 
 .modal-content {
-   background-color: #fefefe;
+   background-color: black;
    margin: 15% auto; /* 15% from the top and centered */
    padding: 20px;
-   border: 1px solid #888;
+   border: 1px solid #2a2a2a;
    border-radius: 1rem;
    width: 80%; /* Could be more or less, depending on screen size */
    min-height: 200px;
    display: flex;
    flex-direction: column;
-   padding: 0, 10rem;
+   padding: 1rem;
+   gap: 1rem;
 }
+
+.modal-playlist-header{
+    display: flex;
+    gap: 1rem;
+}
+
+.modal-playlist-header > img{
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
+
+#modal-playlist-songs{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modal-playlist-song-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid #2a2a2a;
+    border-radius: 1rem;
+    background-color: #121212;
+    padding: 0.5rem;
+}
+
+.song-info{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    line-height: 0;
+    align-items:flex-start;
+}
+
+.song-info > img{
+    width: 100px;
+    height: 75px;
+    object-fit: cover;
+}
+
+.like-container{
+    color: #f8f8f8;
+}
+
 .close {
-   color: #aaa;
+   color: #2a2a2a;
    float: right;
    font-size: 28px;
    font-weight: bold;
 }
 .close:hover,
 .close:focus {
-   color: black;
+   color: red;
    text-decoration: none;
    cursor: pointer;
 }
@@ -166,7 +220,10 @@ Modal
 */
 #footer{
     min-height: 50px;
-    background-color: grey;
+    background-color: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 

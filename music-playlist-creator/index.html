@@ -9,79 +9,75 @@
     
     <link rel="stylesheet" href="style.css">
 
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
     <!--Font awesome kit importation script-->
     <script src="https://kit.fontawesome.com/7c56c94f87.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header id="nav">
         <h1>
-            Music Playlist Explorer
+            Diego's Music Playlist Explorer
         </h1>
     </header>
 
     <main> 
-        <section class="playlist-cards">
-            <div class="playlist-card">
-                <img src="./assets/img/download.jpeg" alt="Kanye west">
-                <div class="info">
-                    <h3>Playlist Title</h3>
-                    <p>Creator Name</p>
+        <section id="playlist-cards">
+            <!--
+            Playlist card template
+                <div class="playlist-card" onclick="openModal({songID: '18', song_name: 'Yo Perreo Sola', song_author: 'Bad Bunny', song_art: './assets/img/badbunny-perreo.jpeg',csong_album: 'YHLQMDLG',csong_duration: '3:18'})">
+                    <img src="./assets/img/playlists/playlist.png" alt="Kanye west">
+                    <div class="info">
+                        <h3>Playlist Title</h3>
+                        <p>Creator Name</p>
+                    </div>
+                    <div class="like-container">
+                        <button> <i class="fa-regular fa-heart"></i></button>
+                        <p>99</p>
+                    </div>
                 </div>
-                <div class="like-container">
-                    <button> <i class="fa-regular fa-heart"></i></button>
-                    <p>99</p>
-                </div>
-            </div>
-            <div class="playlist-card">
-                <img src="./assets/img/download.jpeg" alt="Kanye west">
-                <div class="info">
-                    <h3>Playlist Title</h3>
-                    <p>Creator Name</p>
-                </div>
-                <div class="like-container">
-                    <button> <i class="fa-regular fa-heart"></i></button>
-                    <p>99</p>
-                </div>
-            </div>
-            <div class="playlist-card">
-                <img src="./assets/img/download.jpeg" alt="Kanye west">
-                <div class="info">
-                    <h3>Playlist Title</h3>
-                    <p>Creator Name</p>
-                </div>
-                <div class="like-container">
-                    <button> <i class="fa-regular fa-heart"></i></button>
-                    <p>99</p>
-                </div>
-            </div>
+            -->
             
-            <div class="playlist-card">
-                <img src="./assets/img/download.jpeg" alt="Kanye west">
-                <div class="info">
-                    <h3>Playlist Title</h3>
-                    <p>Creator Name</p>
-                </div>
-                <div class="like-container">
-                    <button> <i class="fa-regular fa-heart"></i></button>
-                    <p>99</p>
-                </div>
-            </div>
         </section>
-        <div onclick="openModal({name: 'Summer Beats Festival', imageUrl: 'path/to/festival.jpg', dates: 'July 15-17', location: 'Downtown Park', lineup: ['Artist A', 'Artist B']})">
-            Click here for festival details!
-        </div>
     </main>
 
     <div id="event-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <section></section>
-        </div>
+        <!--
+        Playlist Modal Template 
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <section class="modal-playlist-header">
+                    <img src="./assets/img/playlists/playlist.png" alt="">
+                    <div class="modal-playlist-info">
+                        <h2>Playlist Title</h2>
+                        <h3>Creator Name</h3>
+                    </div>
+                </section>
+                <section id="modal-playlist-songs">
+                    <div class="modal-playlist-song-card">
+                        <div class="song-info">
+                            <img src="./assets/img/playlists/playlist.png" alt="" class="song-image">
+                            <div>
+                                <h4>Song Title</h4>
+                                <p>Artist Name</p>
+                                <p>Album name</p>
+                            </div>
+                        </div>
+                        <h4>3:00</h4>
+                    </div>
+                </section>
+            </div>
+        -->
     </div>
 
 
     <footer id="footer">
-        footer
+        <a href="https://open.spotify.com/playlist/45CL01XHAvVUvyaNsqCtFr?si=98a016201d1a443a">
+            <h3>Follow us in Spotify!</h3>
+        </a>        
     </footer>
 
     <script src="data/data.js"></script>
