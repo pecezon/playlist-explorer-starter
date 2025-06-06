@@ -32,56 +32,84 @@ export async function fetchPlaylists() {
   }
 }
 
+function createPlaylistCards() {
+  //Render playlists boxes
+  const playlistsContainer = document.getElementById("playlist-cards");
+
+  //Empty playlists container
+  playlistsContainer.innerHTML = "";
+
+  for (const playlist of playlistsArray) {
+    //Create playlist card
+    let playlistCard = document.createElement("div");
+    playlistCard.className = "playlist-card";
+
+    //Create Image Section
+    let playlistImg = document.createElement("img");
+    playlistImg.src = playlist.playlist_art;
+    playlistImg.alt = playlist.playlist_name;
+    playlistCard.appendChild(playlistImg);
+    playlistImg.onclick = () => openModal(playlist);
+
+    let info = document.createElement("div");
+    info.className = "info";
+    let playlistName = document.createElement("h3");
+    playlistName.textContent = playlist.playlist_name;
+    info.appendChild(playlistName);
+    let playlistAuthor = document.createElement("p");
+    playlistAuthor.textContent = playlist.playlist_author;
+    info.appendChild(playlistAuthor);
+    playlistCard.appendChild(info);
+    info.onclick = () => openModal(playlist);
+
+    let likeContainer = document.createElement("div");
+    likeContainer.className = "like-container";
+    let likeButton = document.createElement("button");
+    let likeIcon = document.createElement("i");
+    likeIcon.className = "fa-regular fa-heart";
+    likeButton.appendChild(likeIcon);
+    let likeCount = document.createElement("p");
+    likeCount.textContent = playlist.likes;
+    likeButton.onclick = () =>
+      likePlaylist(playlist.playlistID, likeButton, likeIcon, likeCount);
+    likeContainer.appendChild(likeButton);
+    likeContainer.appendChild(likeCount);
+    playlistCard.appendChild(likeContainer);
+
+    playlistsContainer.appendChild(playlistCard);
+  }
+}
+
 //Starting flow to render page
 async function startFlow() {
   try {
     //Fetch songs and playlists from the json files
     songsArray = await fetchSongs();
     playlistsArray = await fetchPlaylists();
-
-    //Render playlists boxes
-    const playlistsContainer = document.getElementById("playlist-cards");
-    for (const playlist of playlistsArray) {
-      console.log(playlist);
-
-      //Create playlist card
-      let playlistCard = document.createElement("div");
-      playlistCard.className = "playlist-card";
-
-      //Create Image Section
-      let playlistImg = document.createElement("img");
-      playlistImg.src = playlist.playlist_art;
-      playlistImg.alt = playlist.playlist_name;
-      playlistCard.appendChild(playlistImg);
-      playlistImg.onclick = () => openModal(playlist);
-
-      let info = document.createElement("div");
-      info.className = "info";
-      let playlistName = document.createElement("h3");
-      playlistName.textContent = playlist.playlist_name;
-      info.appendChild(playlistName);
-      let playlistAuthor = document.createElement("p");
-      playlistAuthor.textContent = playlist.playlist_author;
-      info.appendChild(playlistAuthor);
-      playlistCard.appendChild(info);
-      info.onclick = () => openModal(playlist);
-
-      let likeContainer = document.createElement("div");
-      likeContainer.className = "like-container";
-      let likeButton = document.createElement("button");
-      let likeIcon = document.createElement("i");
-      likeIcon.className = "fa-regular fa-heart";
-      likeButton.appendChild(likeIcon);
-      let likeCount = document.createElement("p");
-      likeCount.textContent = playlist.likes;
-      likeButton.onclick = () =>
-        likePlaylist(playlist.playlistID, likeButton, likeIcon, likeCount);
-      likeContainer.appendChild(likeButton);
-      likeContainer.appendChild(likeCount);
-      playlistCard.appendChild(likeContainer);
-
-      playlistsContainer.appendChild(playlistCard);
-    }
+    createPlaylistCards();
+    const radioGroup = document.getElementById("radio-container");
+    radioGroup.addEventListener("change", function (event) {
+      if (event.target.type === "radio") {
+        if (event.target.value === "sort-dates") {
+          playlistsArray.sort((a, b) => a.playlistID - b.playlistID);
+          console.log(playlistsArray);
+          createPlaylistCards();
+        } else if (event.target.value === "sort-likes") {
+          playlistsArray.sort((a, b) => a.likes - b.likes);
+          console.log(playlistsArray);
+          createPlaylistCards();
+        } else if (event.target.value === "sort-names") {
+          playlistsArray.sort((a, b) =>
+            a.playlist_name > b.playlist_name
+              ? 1
+              : b.playlist_name > a.playlist_name
+              ? -1
+              : 0
+          );
+          createPlaylistCards();
+        }
+      }
+    });
   } catch (error) {
     console.error(error.message);
   }

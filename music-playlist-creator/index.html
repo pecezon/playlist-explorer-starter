@@ -1,33 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Music Playlist Explorer</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    <link rel="stylesheet" href="style.css" />
 
     <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <!--Font awesome kit importation script-->
-    <script src="https://kit.fontawesome.com/7c56c94f87.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <script
+      src="https://kit.fontawesome.com/7c56c94f87.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <header id="nav">
-        <h1>
-            Diego's Music Playlist Explorer
-        </h1>
-        <a href="./featured.html">Featured</a>
+      <h1>Diego's Music Playlist Explorer</h1>
+      <a href="./featured.html">Featured</a>
     </header>
 
-    <main> 
-        <section id="playlist-cards">
-            <!--
+    <section id="filter-menu">
+      <h3>Sort by:</h3>
+      <div id="radio-container">
+        <input
+          type="radio"
+          id="sort-dates"
+          value="sort-dates"
+          name="sorting"
+          checked
+        />
+        <label for="sort-dates">Dates</label>
+        <input type="radio" id="sort-likes" value="sort-likes" name="sorting" />
+        <label for="sort-likes">Likes</label>
+        <input type="radio" id="sort-names" value="sort-names" name="sorting" />
+        <label for="sort-names">Names</label>
+      </div>
+    </section>
+
+    <main>
+      <section id="playlist-cards">
+        <!--
             Playlist card template
                 <div class="playlist-card" onclick="openModal({songID: '18', song_name: 'Yo Perreo Sola', song_author: 'Bad Bunny', song_art: './assets/img/badbunny-perreo.jpeg',csong_album: 'YHLQMDLG',csong_duration: '3:18'})">
                     <img src="./assets/img/playlists/playlist.png" alt="Kanye west">
@@ -41,12 +63,11 @@
                     </div>
                 </div>
             -->
-            
-        </section>
+      </section>
     </main>
 
     <div id="event-modal" class="modal">
-        <!--
+      <!--
         Playlist Modal Template 
             <div class="modal-content">
                 <span class="close">&times;</span>
@@ -74,12 +95,13 @@
         -->
     </div>
 
-
     <footer id="footer">
-        <a href="https://open.spotify.com/playlist/45CL01XHAvVUvyaNsqCtFr?si=98a016201d1a443a">
-            <h3>Follow us in Spotify!</h3>
-        </a>        
+      <a
+        href="https://open.spotify.com/playlist/45CL01XHAvVUvyaNsqCtFr?si=98a016201d1a443a"
+      >
+        <h3>Follow us on Spotify!</h3>
+      </a>
     </footer>
     <script src="script.js" type="module"></script>
-</body>
+  </body>
 </html>

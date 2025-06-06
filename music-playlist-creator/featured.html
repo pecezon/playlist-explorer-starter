@@ -1,79 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Featured Page</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
 
     <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <!--Font awesome kit importation script-->
-    <script src="https://kit.fontawesome.com/7c56c94f87.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <script
+      src="https://kit.fontawesome.com/7c56c94f87.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <header id="nav">
-        <h1>
-            Diego's Music Playlist Explorer
-        </h1>
-        <a href="./index.html">All</a>
+      <h1>Diego's Music Playlist Explorer</h1>
+      <a href="./index.html">All</a>
     </header>
     <main id="featured-main">
-        <section id="featured-playlist-description">
-            <img src="./assets/img/playlists/playlist.png" alt="Playlist Image">
+      <section id="featured-playlist-description">
+        <img src="./assets/img/playlists/playlist.png" alt="Playlist Image" />
+        <div>
+          <h1>Playlist Name</h1>
+          <h3>Creator Name</h3>
+        </div>
+      </section>
+      <section id="featured-playlist-songs">
+        <div class="featured-playlist-song">
+          <div class="featured-playlist-song-info">
+            <i class="fa-solid fa-music"></i>
+            <img src="./assets/img/songs/song.png" alt="" />
             <div>
-                <h1>Playlist Name</h1>
-                <h3>Creator Name</h3>
+              <h3>Song Name</h3>
+              <p>Artist Name</p>
             </div>
-        </section>
-        <section id="featured-playlist-songs">
-            <div class="featured-playlist-song">
-                <div class="featured-playlist-song-info">
-                    <i class="fa-solid fa-music"></i>
-                    <img src="./assets/img/songs/song.png" alt="">
-                    <div>
-                        <h3>Song Name</h3>
-                        <p>Artist Name</p>
-                    </div>
-                </div>
-                <h4>Album Name</h4>
-                <h4>12:00</h4>
+          </div>
+          <h4>Album Name</h4>
+          <h4>12:00</h4>
+        </div>
+        <div class="featured-playlist-song">
+          <div class="featured-playlist-song-info">
+            <i class="fa-solid fa-music"></i>
+            <img src="./assets/img/songs/song.png" alt="" />
+            <div>
+              <h3>Song Name</h3>
+              <p>Artist Name</p>
             </div>
-                <div class="featured-playlist-song">
-                <div class="featured-playlist-song-info">
-                    <i class="fa-solid fa-music"></i>
-                    <img src="./assets/img/songs/song.png" alt="">
-                    <div>
-                        <h3>Song Name</h3>
-                        <p>Artist Name</p>
-                    </div>
-                </div>
-                <h4>Album Name</h4>
-                <h4>12:00</h4>
+          </div>
+          <h4>Album Name</h4>
+          <h4>12:00</h4>
+        </div>
+        <div class="featured-playlist-song">
+          <div class="featured-playlist-song-info">
+            <i class="fa-solid fa-music"></i>
+            <img src="./assets/img/songs/song.png" alt="" />
+            <div>
+              <h3>Song Name</h3>
+              <p>Artist Name</p>
             </div>
-            <div class="featured-playlist-song">
-                <div class="featured-playlist-song-info">
-                    <i class="fa-solid fa-music"></i>
-                    <img src="./assets/img/songs/song.png" alt="">
-                    <div>
-                        <h3>Song Name</h3>
-                        <p>Artist Name</p>
-                    </div>
-                </div>
-                <h4>Album Name</h4>
-                <h4>12:00</h4>
-            </div>
-        </section>
+          </div>
+          <h4>Album Name</h4>
+          <h4>12:00</h4>
+        </div>
+      </section>
     </main>
     <footer id="footer">
-        <a href="https://open.spotify.com/playlist/45CL01XHAvVUvyaNsqCtFr?si=98a016201d1a443a">
-            <h3>Follow us in Spotify!</h3>
-        </a>        
+      <a
+        href="https://open.spotify.com/playlist/45CL01XHAvVUvyaNsqCtFr?si=98a016201d1a443a"
+      >
+        <h3>Follow us on Spotify!</h3>
+      </a>
     </footer>
 
     <script src="featured-script.js" type="module"></script>
-</body>
+  </body>
 </html>

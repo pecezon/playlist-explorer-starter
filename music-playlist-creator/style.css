@@ -57,13 +57,28 @@ Nav styling
 }
 
 /*
+Sorting Menu
+*/
+#filter-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+
+
+
+/*
 Grid layout for playlist cards
 */
 #playlist-cards{
     display: grid;
     grid-template-rows: 300px;
     grid-auto-rows: 300px;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
     padding: 1.5rem;
 }
@@ -208,7 +223,7 @@ Modal
     object-fit: cover;
 }
 
-#shuffle-btn, #nav > a{
+#shuffle-btn, #nav > a, #sort-btn{
     padding: 0.5rem 1rem;
     border: #f8f8f8 1px solid;
     color: #f8f8f8;
@@ -217,7 +232,7 @@ Modal
     background-color: #2a2a2a;
 }
 
-#shuffle-btn:hover, #nav > a:hover{
+#shuffle-btn:hover, #nav > a:hover, #sort-btn:hover{
     background-color: #b3b3b3;
 }
 
@@ -269,6 +284,7 @@ Modal
 
 #featured-playlist-description > img{
     width: 250px;
+    height: 250px;
     object-fit: cover;
 }
 
@@ -287,6 +303,8 @@ Modal
 
 .featured-playlist-song img{
     width: 100px;
+    height: 100px;
+    object-fit: cover;
 }
 
 .featured-playlist-song-info{
