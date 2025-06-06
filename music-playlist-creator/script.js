@@ -32,6 +32,7 @@ export async function fetchPlaylists() {
   }
 }
 
+//Create Playlists Cards given an array of playlists (default is ordered by creation date)
 function createPlaylistCards(playlistsArr = playlistsArray) {
   //Render playlists boxes
   const playlistsContainer = document.getElementById("playlist-cards");
@@ -135,6 +136,7 @@ async function startFlow() {
     const clearSearchButton = document.getElementById("clear-search-button");
     clearSearchButton.onclick = () => {
       searchBar.value = "";
+      filteredPlaylistsArray = playlistsArray;
       createPlaylistCards();
     };
 
@@ -148,7 +150,7 @@ async function startFlow() {
   }
 }
 
-//Sort
+//Sort playlist given the radio input value
 function sortPlaylist(playlistsArr = playlistsArray) {
   if (event.target.type === "radio") {
     if (event.target.value === "sort-dates") {

@@ -78,13 +78,5 @@
         "playlist_art": "./assets/img/playlists/rap-gods.jpeg",
         "songs": [2, 9, 13, 14, 17],
         "likes": 341
-    },
-    {
-        "playlistID": "11",
-        "playlist_name": "Rap Gods United",
-        "playlist_author": "Diegopez",
-        "playlist_art": "./assets/img/playlists/rap-gods.jpeg",
-        "songs": [2, 9, 13, 14, 17],
-        "likes": 341
     }
 ]
