@@ -102,11 +102,13 @@ async function startFlow() {
     playlistsArray = await fetchPlaylists();
     createPlaylistCards();
 
+    let filteredPlaylistsArray = playlistsArray;
+
     //Logic for SearchBar on Enter
     const searchBar = document.getElementById("search-bar");
     searchBar.addEventListener("keydown", function (event) {
       if (event.key === "Enter") {
-        let filteredPlaylistsArray = playlistsArray.filter((playlist) =>
+        filteredPlaylistsArray = playlistsArray.filter((playlist) =>
           playlist.playlist_name
             .toLowerCase()
             .includes(searchBar.value.toLowerCase())
@@ -120,7 +122,7 @@ async function startFlow() {
     const searchButton = document.getElementById("search-button");
     searchButton.onclick = () => {
       console.log("bruh");
-      let filteredPlaylistsArray = playlistsArray.filter((playlist) =>
+      filteredPlaylistsArray = playlistsArray.filter((playlist) =>
         playlist.playlist_name
           .toLowerCase()
           .includes(searchBar.value.toLowerCase())
@@ -138,34 +140,39 @@ async function startFlow() {
 
     //Logic for Sort By Menu
     const radioGroup = document.getElementById("radio-container");
-    radioGroup.addEventListener("change", function (event) {
-      if (event.target.type === "radio") {
-        if (event.target.value === "sort-dates") {
-          let sortedPlaylistsArray = [...playlistsArray].sort(
-            (a, b) => a.playlistID - b.playlistID
-          );
-          console.log(playlistsArray);
-          createPlaylistCards(sortedPlaylistsArray);
-        } else if (event.target.value === "sort-likes") {
-          let sortedPlaylistsArray = [...playlistsArray].sort(
-            (a, b) => a.likes - b.likes
-          );
-          console.log(playlistsArray);
-          createPlaylistCards(sortedPlaylistsArray);
-        } else if (event.target.value === "sort-names") {
-          let sortedPlaylistsArray = [...playlistsArray].sort((a, b) =>
-            a.playlist_name > b.playlist_name
-              ? 1
-              : b.playlist_name > a.playlist_name
-              ? -1
-              : 0
-          );
-          createPlaylistCards(sortedPlaylistsArray);
-        }
-      }
-    });
+    radioGroup.addEventListener("change", () =>
+      sortPlaylist(filteredPlaylistsArray)
+    );
   } catch (error) {
     console.error(error.message);
+  }
+}
+
+//Sort
+function sortPlaylist(playlistsArr = playlistsArray) {
+  if (event.target.type === "radio") {
+    if (event.target.value === "sort-dates") {
+      let sortedPlaylistsArray = [...playlistsArr].sort(
+        (a, b) => a.playlistID - b.playlistID
+      );
+      console.log(playlistsArray);
+      createPlaylistCards(sortedPlaylistsArray);
+    } else if (event.target.value === "sort-likes") {
+      let sortedPlaylistsArray = [...playlistsArr].sort(
+        (a, b) => a.likes - b.likes
+      );
+      console.log(playlistsArray);
+      createPlaylistCards(sortedPlaylistsArray);
+    } else if (event.target.value === "sort-names") {
+      let sortedPlaylistsArray = [...playlistsArr].sort((a, b) =>
+        a.playlist_name > b.playlist_name
+          ? 1
+          : b.playlist_name > a.playlist_name
+          ? -1
+          : 0
+      );
+      createPlaylistCards(sortedPlaylistsArray);
+    }
   }
 }
 
