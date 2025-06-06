@@ -126,18 +126,21 @@ function openModal(playlist) {
   try {
     modal.innerHTML = `
          <div class="modal-content">
-               <span class="close">&times;</span>
-               <section class="modal-playlist-header">
-                  <img src=${playlist.playlist_art} alt=${playlist.playlist_name}>
-                  <div class="modal-playlist-info">
-                     <h2>${playlist.playlist_name}</h2>
-                     <h3>${playlist.playlist_author}</h3>
-                     <button id="shuffle-btn">Shuffle</button>
-                  </div>
-               </section>
-               <section id="modal-playlist-songs">
-                  
-               </section>
+            <div id="modal-nav">
+              <span class="close">&times;</span>
+              <i class="delete-playlist fa fa-trash" aria-hidden="true"></i>
+            </div> 
+            <section class="modal-playlist-header">
+              <img src=${playlist.playlist_art} alt=${playlist.playlist_name}>
+              <div class="modal-playlist-info">
+                <h2>${playlist.playlist_name}</h2>
+                <h3>${playlist.playlist_author}</h3>
+                <button id="shuffle-btn">Shuffle</button>
+              </div>
+            </section>
+            <section id="modal-playlist-songs">
+                    
+            </section>
          </div>
       `;
 

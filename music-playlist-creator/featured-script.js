@@ -52,8 +52,8 @@ async function loadFeaturedPlaylistPage() {
                         <p>${song.song_author}</p>
                     </div>
                 </div>
-                <h4>${song.song_album}</h4>
-                <h4>${song.song_duration}</h4>
+                <h4 class="featured-song-album">${song.song_album}</h4>
+                <h4 class="featured-song-duration">${song.song_duration}</h4>
             </div>
          `;
   }
