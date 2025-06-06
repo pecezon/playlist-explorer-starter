@@ -44,6 +44,10 @@ a {
   color: white;
 }
 
+.hidden {
+  display: none;
+}
+
 /*
 Nav styling
 */
@@ -54,6 +58,50 @@ Nav styling
   align-items: center;
   justify-content: space-between;
   min-height: 10%;
+}
+
+#nav-utils {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+}
+
+.custom_input {
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 100%;
+}
+
+.custom_input .input {
+  font-size: 16px;
+  padding: 5px 10px;
+  width: 100%;
+  padding-left: 35px;
+  outline: none;
+  background: #434343;
+  color: #ffffff;
+  border: 1px solid #b3b3b3;
+  border-radius: 18px;
+  transition: 0.3s ease;
+}
+
+.custom_input .input:focus {
+  background: #767676;
+  border: 1px solid #000000;
+  border-radius: 10px;
+}
+
+.custom_input .input::placeholder {
+  color: #ffffff;
+}
+
+.custom_input i {
+  position: absolute;
+  left: 10px;
+  fill: #ffffff;
+  width: 16px;
+  height: 16px;
 }
 
 /*
@@ -92,6 +140,17 @@ Grid layout for playlist cards
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.delete-icon {
+  padding-right: 1rem;
 }
 
 /*
@@ -221,14 +280,21 @@ Modal
 }
 
 #shuffle-btn,
-#nav > a,
-#sort-btn {
+#nav a,
+#sort-btn,
+#search-button,
+#clear-search-button {
   padding: 0.5rem 1rem;
   border: #f8f8f8 1px solid;
   color: #f8f8f8;
   border-radius: 1rem;
   cursor: pointer;
   background-color: #2a2a2a;
+}
+
+#clear-search-button {
+  border-color: red;
+  color: red;
 }
 
 #shuffle-btn:hover,
@@ -243,8 +309,7 @@ Modal
   align-items: center;
 }
 
-.close,
-.delete-playlist {
+.close {
   width: 28px;
   color: #2a2a2a;
   float: right;
@@ -253,8 +318,10 @@ Modal
 }
 .close:hover,
 .close:focus,
-.delete-playlist:hover,
-.delete-playlist:focus {
+.delete-icon:hover,
+.delete-icon:focus,
+.like-container i:hover,
+.like-container i:focus {
   color: red;
   text-decoration: none;
   cursor: pointer;

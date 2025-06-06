@@ -32,14 +32,14 @@ export async function fetchPlaylists() {
   }
 }
 
-function createPlaylistCards() {
+function createPlaylistCards(playlistsArr = playlistsArray) {
   //Render playlists boxes
   const playlistsContainer = document.getElementById("playlist-cards");
 
   //Empty playlists container
   playlistsContainer.innerHTML = "";
 
-  for (const playlist of playlistsArray) {
+  for (const playlist of playlistsArr) {
     //Create playlist card
     let playlistCard = document.createElement("div");
     playlistCard.className = "playlist-card";
@@ -62,6 +62,9 @@ function createPlaylistCards() {
     playlistCard.appendChild(info);
     info.onclick = () => openModal(playlist);
 
+    let cardFooter = document.createElement("div");
+    cardFooter.className = "card-footer";
+
     let likeContainer = document.createElement("div");
     likeContainer.className = "like-container";
     let likeButton = document.createElement("button");
@@ -74,8 +77,19 @@ function createPlaylistCards() {
       likePlaylist(playlist.playlistID, likeButton, likeIcon, likeCount);
     likeContainer.appendChild(likeButton);
     likeContainer.appendChild(likeCount);
-    playlistCard.appendChild(likeContainer);
 
+    let deleteIcon = document.createElement("i");
+    deleteIcon.className = "delete-icon ";
+    deleteIcon.classList.add("fa");
+    deleteIcon.classList.add("fa-trash");
+    deleteIcon.onclick = () => {
+      playlistCard.style.display = "none";
+    };
+
+    cardFooter.appendChild(likeContainer);
+    cardFooter.appendChild(deleteIcon);
+
+    playlistCard.appendChild(cardFooter);
     playlistsContainer.appendChild(playlistCard);
   }
 }
@@ -87,26 +101,66 @@ async function startFlow() {
     songsArray = await fetchSongs();
     playlistsArray = await fetchPlaylists();
     createPlaylistCards();
+
+    //Logic for SearchBar on Enter
+    const searchBar = document.getElementById("search-bar");
+    searchBar.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        let filteredPlaylistsArray = playlistsArray.filter((playlist) =>
+          playlist.playlist_name
+            .toLowerCase()
+            .includes(searchBar.value.toLowerCase())
+        );
+        console.log(filteredPlaylistsArray);
+        createPlaylistCards(filteredPlaylistsArray);
+      }
+    });
+
+    //SearchBar Button Logic
+    const searchButton = document.getElementById("search-button");
+    searchButton.onclick = () => {
+      console.log("bruh");
+      let filteredPlaylistsArray = playlistsArray.filter((playlist) =>
+        playlist.playlist_name
+          .toLowerCase()
+          .includes(searchBar.value.toLowerCase())
+      );
+      console.log(filteredPlaylistsArray);
+      createPlaylistCards(filteredPlaylistsArray);
+    };
+
+    //Clear Search Bar Logic
+    const clearSearchButton = document.getElementById("clear-search-button");
+    clearSearchButton.onclick = () => {
+      searchBar.value = "";
+      createPlaylistCards();
+    };
+
+    //Logic for Sort By Menu
     const radioGroup = document.getElementById("radio-container");
     radioGroup.addEventListener("change", function (event) {
       if (event.target.type === "radio") {
         if (event.target.value === "sort-dates") {
-          playlistsArray.sort((a, b) => a.playlistID - b.playlistID);
+          let sortedPlaylistsArray = [...playlistsArray].sort(
+            (a, b) => a.playlistID - b.playlistID
+          );
           console.log(playlistsArray);
-          createPlaylistCards();
+          createPlaylistCards(sortedPlaylistsArray);
         } else if (event.target.value === "sort-likes") {
-          playlistsArray.sort((a, b) => a.likes - b.likes);
+          let sortedPlaylistsArray = [...playlistsArray].sort(
+            (a, b) => a.likes - b.likes
+          );
           console.log(playlistsArray);
-          createPlaylistCards();
+          createPlaylistCards(sortedPlaylistsArray);
         } else if (event.target.value === "sort-names") {
-          playlistsArray.sort((a, b) =>
+          let sortedPlaylistsArray = [...playlistsArray].sort((a, b) =>
             a.playlist_name > b.playlist_name
               ? 1
               : b.playlist_name > a.playlist_name
               ? -1
               : 0
           );
-          createPlaylistCards();
+          createPlaylistCards(sortedPlaylistsArray);
         }
       }
     });
