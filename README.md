@@ -76,7 +76,7 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](htt
 
 #### STRETCH FEATURES
 
-- [] **Add New Playlists**
+- [ ] **Add New Playlists**
 
   - [ ] Allow users to create new playlists.
   - [ ] Using a form, users can input playlist:
