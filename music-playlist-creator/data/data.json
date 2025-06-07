@@ -1,7 +1,7 @@
 [
     {
         "playlistID": "1",
-        "playlist_name": "Kanye West Gym Playlist",
+        "playlist_name": "Kanye West Gym",
         "playlist_author": "Diegopez",
         "playlist_art": "./assets/img/playlists/kanye-gym.jpeg",
         "songs": [1, 2, 3, 4, 5],
@@ -9,7 +9,7 @@
     },
     {
         "playlistID": "2",
-        "playlist_name": "Tyler the Creator Vibes",
+        "playlist_name": "Tyler's Mugshot",
         "playlist_author": "Marge",
         "playlist_art": "./assets/img/playlists/tyler-vibes.jpeg",
         "songs": [6, 7, 8, 9, 10],
@@ -25,7 +25,7 @@
     },
     {
         "playlistID": "4",
-        "playlist_name": "Bad Bunny Perreo Intenso",
+        "playlist_name": "Latino Urbano",
         "playlist_author": "Pepito",
         "playlist_art": "./assets/img/playlists/badbunny-perreo.jpeg",
         "songs": [16, 17, 18, 19, 20],
@@ -33,7 +33,7 @@
     },
     {
         "playlistID": "5",
-        "playlist_name": "Perreo Pa' la Playa 🌊",
+        "playlist_name": "Pa' la Playa 🌊",
         "playlist_author": "Sandra",
         "playlist_art": "./assets/img/playlists/perro-playa.jpeg",
         "songs": [16, 17, 18, 20],
@@ -41,7 +41,7 @@
     },
     {
         "playlistID": "6",
-        "playlist_name": "Kendrick Lamar: Bars & Soul",
+        "playlist_name": "Kendrick Lamar Bars",
         "playlist_author": "Juanito",
         "playlist_art": "./assets/img/playlists/kendrick-bars.jpeg",
         "songs": [11, 13, 14, 15],
@@ -65,7 +65,7 @@
     },
     {
         "playlistID": "9",
-        "playlist_name": "Bad Bunny Sad Boy Hours 💔",
+        "playlist_name": "Bad Bunny Trap",
         "playlist_author": "CoraRoto",
         "playlist_art": "./assets/img/playlists/badbunny-sad.jpeg",
         "songs": [18, 19, 20],
@@ -73,9 +73,17 @@
     },
     {
         "playlistID": "10",
-        "playlist_name": "Rap Gods United",
+        "playlist_name": "Rap GOATS",
         "playlist_author": "Diegopez",
         "playlist_art": "./assets/img/playlists/rap-gods.jpeg",
+        "songs": [2, 9, 13, 14, 17],
+        "likes": 341
+    },
+    {
+        "playlistID": "11",
+        "playlist_name": "Corridos Belikos",
+        "playlist_author": "Diego Lopez",
+        "playlist_art": "./assets/img/playlists/julion.jpeg",
         "songs": [2, 9, 13, 14, 17],
         "likes": 341
     }

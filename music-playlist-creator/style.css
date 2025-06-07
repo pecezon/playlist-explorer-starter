@@ -212,7 +212,8 @@ Grid layout for playlist cards
 /*
 Modal
 */
-.modal {
+.modal,
+#new-playlist-modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -274,7 +275,7 @@ Modal
 }
 
 .song-info > img {
-  width: 100px;
+  width: 75px;
   height: 75px;
   object-fit: cover;
 }
@@ -298,7 +299,8 @@ Modal
 }
 
 #shuffle-btn:hover,
-#nav > a:hover,
+#nav a:hover,
+#nav button:hover,
 #sort-btn:hover {
   background-color: #b3b3b3;
 }
@@ -336,6 +338,49 @@ Modal
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/*
+New playlist
+*/
+#new-playlist-button {
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  z-index: 20;
+  position: sticky;
+  left: 2rem;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  background-color: #1cd760;
+  border: 1px solid green;
+  padding: 1rem;
+  border-radius: 100%;
+}
+
+#new-playlist-modal {
+  display: none;
+}
+
+#new-playlist-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 400px;
+}
+
+#playlist-cover-radio-group {
+  display: flex;
+  justify-content: center;
+}
+
+#new-playlist-form img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
 }
 
 /*

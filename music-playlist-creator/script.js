@@ -145,6 +145,10 @@ async function startFlow() {
     radioGroup.addEventListener("change", () =>
       sortPlaylist(filteredPlaylistsArray)
     );
+
+    //Logic for new playlist modal opening
+    const newPlaylistButton = document.getElementById("new-playlist-button");
+    newPlaylistButton.addEventListener("click", () => openNewPlaylistModal());
   } catch (error) {
     console.error(error.message);
   }
@@ -191,7 +195,6 @@ function openModal(playlist) {
          <div class="modal-content">
             <div id="modal-nav">
               <span class="close">&times;</span>
-              <i class="delete-playlist fa fa-trash" aria-hidden="true"></i>
             </div> 
             <section class="modal-playlist-header">
               <img src=${playlist.playlist_art} alt=${playlist.playlist_name}>
@@ -230,6 +233,21 @@ function openModal(playlist) {
   } catch (error) {
     console.error(error);
   }
+}
+
+//New Playlist Modal Form
+const newPlaylistModal = document.getElementById("new-playlist-modal");
+
+//Open Modal given a playlist object
+function openNewPlaylistModal() {
+  newPlaylistModal.style.display = "block";
+
+  window.onclick = function (event) {
+    if (event.target == newPlaylistModal) {
+      newPlaylistModal.style.display = "none";
+    }
+  };
+  console.log("abriendo");
 }
 
 //Load and generate songs containers

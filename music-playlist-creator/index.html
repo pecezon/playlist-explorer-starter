@@ -108,6 +108,49 @@
         -->
     </div>
 
+    <div id="new-playlist-modal">
+      <div class="modal-content">
+        <h1>Create New Playlist</h1>
+        <form action="" id="new-playlist-form">
+          <div id="new-playlist-form-content">
+            <label for="playlist-name">Playlist Name:</label>
+            <input type="text" id="playlist-name" placeholder="Playlist Name" />
+            <label for="playlist-author">Author:</label>
+            <input
+              type="text"
+              id="playlist-author"
+              placeholder="Playlist Author"
+            />
+
+            <label for="">Playlist Cover:</label>
+            <div id="playlist-cover-radio-group">
+              <label for="playlist-cover-1">
+                <input type="radio" name="playlist-cover-choice" />
+                <img src="./assets/img/playlists/kanye-gym.jpeg" alt="" />
+              </label>
+              <label for="playlist-cover-2">
+                <input type="radio" name="playlist-cover-choice" />
+                <img src="./assets/img/playlists/kendrick-bars.jpeg" alt="" />
+              </label>
+              <label for="playlist-cover-3">
+                <input type="radio" name="playlist-cover-choice" />
+                <img src="./assets/img/playlists/kanye-classics.jpeg" alt="" />
+              </label>
+            </div>
+
+            <label for="playlist-songs">Playlist Songs:</label>
+            <input type="text" id="playlist-name" placeholder="Playlist Name" />
+
+            <input type="submit" value="submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <button id="new-playlist-button">
+      <i class="fa-solid fa-plus"></i>
+    </button>
+
     <footer id="footer">
       <a
         href="https://open.spotify.com/playlist/45CL01XHAvVUvyaNsqCtFr?si=98a016201d1a443a"
